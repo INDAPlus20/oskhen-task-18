@@ -30,7 +30,7 @@ def search(word):
 
         if currentWord == word:
             print(f"Word {word} occurs {len(occurances)} times:")
-            for occurance in occurances[0:10]:
+            for occurance in occurances:
                 korpus.seek(int(occurance.strip("\n")) - margin)
                 segment = korpus.read(margin*2).replace("\n","|")
                 print(segment)
